@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+body,
+html {
+  overflow:hidden;
+  padding: 0;
+  margin: 0;
+  position: relative; }
+
+li {
+  list-style: none;
+  cursor: pointer; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block; }
+
+b, span, i, a, em {
+  display: inline-block;
+  font-style: normal; }
+
+input, button, select, textarea {
+  outline: none;
+  /*border: none;*/
+  background: 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+/*外阴影*/
+.shadow1 {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+/*内阴影*/
+.shadow2 {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(0, 0, 0, 0.5); }
+/*按钮*/
+.btn {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px; }
+
+.btn_blue {
+  background-color: #106ef0; }
+
+.btn_blue2 {
+  background-color: #09adf6; }
+
+.btn_orange {
+  background-color: #ffa142; }
+
+.btn_gray {
+  background-color: #cedada; }
+
+.btn_green {
+  background-color: #3cbf70; }
+
+.tce {
+  text-align: center; }
+
+.tle {
+  text-align: left; }
+
+.tri {
+  text-align: right; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+/*清除浮动*/
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+/*小三角*/
+.triangle {
+  content: '';
+  height: 0;
+  width: 0;
+  border-top: 5px solid #106ef0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent; }
+
+.triangle2 {
+  content: '';
+  height: 0;
+  width: 0;
+  border-bottom: 5px solid #09adf6;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent; }
+/*动画*/
+.animation {
+  animation: show 5s; }
+
+@keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+

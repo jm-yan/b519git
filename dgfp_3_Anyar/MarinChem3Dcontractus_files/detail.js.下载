@@ -1,0 +1,53 @@
+$(function(){
+    $('.body-detail').mCustomScrollbar();
+
+    $('.tab-word li').click(function () {
+        $(this).addClass('tab-word-active').siblings().removeClass('tab-word-active');
+        $('.tab-photo div').eq($(this).index()).show().siblings().hide();
+    });
+
+
+});
+window.onload=function () {
+    $('.relative').css('background','none');
+    function bodyimg() {
+        var _topheight = $('.body-top').height()-4;
+        var _bottomheight = $('.body-bottom').height()-2;
+        $('.body-cen-div').css({
+            'top':_topheight,
+            'bottom':_bottomheight,
+            'min-height':'100px'
+        });
+    }
+    bodyimg();
+
+    $(window).resize(function () {
+       bodyimg();
+    });
+
+    $(".mid_text img").each(function() {
+        var $p = $(this).closest("p");
+        var $nextSpan = $p.next().find("span");
+        if ($nextSpan.length > 0 && $nextSpan.css("fontSize") == "12px") {
+            $nextSpan.closest("p").css({"lineHeight": "17px", "height": "17px"});
+        }
+
+        var newImg = new Image();
+        newImg.onload = function () {
+
+            if (newImg.width <= 16) {
+                $(this).css({
+                    'position': 'relative',
+                    'top': '2px',
+                    'left': '-3px',
+                    'display': 'inline'
+                })
+            }
+        }
+        newImg.src = $(this).attr('src') + '?' + Date.parse(new Date());
+        $(newImg).addClass('mCS_img_loaded');
+        $(this).replaceWith(newImg);
+
+    })
+    //window.parent.frames.f1($('body').height())
+}

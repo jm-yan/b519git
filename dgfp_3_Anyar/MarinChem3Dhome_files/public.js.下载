@@ -1,0 +1,34 @@
+$(function(){
+	//$(".body-border").mCustomScrollbar();
+	layui.use('element', function(){
+		var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+		element.on('nav', function(data){
+			
+		});
+	  });
+//	  var swiper = new Swiper('.swiper-block', {
+//		pagination: {
+//		  el: '.swiper-pagination',
+//		  clickable: true,
+//		},
+//		});
+		
+		//$("iframe").css("min-height",heing)
+	  	var heing=$(window).height()-$(".welcome-title").height()-$(".navbar-nav").height()-$(".footsec").height()-$(".footfit").height()
+	  	if($(window).width()>1600){
+	  		var winwith=1750
+	  	}else{
+	  		var winwith=$(window).width()
+	  	}
+	  	var onheight=winwith/1920;
+	  	if(heing<1300*onheight){
+	  		heing=1300*onheight
+	  	}
+		$(".relative").css('min-height',heing)
+		//$(".relative").css('min-width',$(window).width())
+		$(".layui-nav li").eq($("#home-index").val()).addClass("layui-this").siblings().removeClass("layui-this")
+		
+})
+//function f1(a){
+//	$("iframe").css("min-height",a)
+//}
